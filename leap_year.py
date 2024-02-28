@@ -10,23 +10,28 @@ Original file is located at
 import datetime
 today = datetime.date.today()
 print(today)
+
+# convert today's date to string and set year, month and day as variables from this
 today = str(today)
 year = int(today[0:4])
 month = int(today[5:7])
 day = int(today[8:])
 
+# create a list with number of days in each month (one for leap year and one for non leap year)
 days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
     leapyear_days = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)# if a year is divisible by 4 it is a leap year unless it is divisible by 100 and not by 400
 number_of_days = 0
 for years in range (0, year):
+    # if the number of years is divisible by 4 and not by 100, it is a leap year so add 366 days
     if years %4 == 0 and years %100 != 0:
         number_of_days += 366
+    # if the number of years is divisible by 400, it is a leap year
     elif years %400 == 0:
         number_of_days += 366
+    # otherwise, it isn't a leap year so add 365 days
     else:
         number_of_days += 365
 
-if year %
 for months in range(0, month):
 
 
